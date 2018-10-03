@@ -5,7 +5,8 @@ class Api::GuestsController < ApplicationController
   end
 
   def show
+    # debugger
     @guest = Guest.find_by(id: params[:id])
-    render :show
+    render 'api/guests/show'
   end
 end

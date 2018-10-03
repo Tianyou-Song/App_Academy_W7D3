@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # Your routes here
     resources :gifts, only: [:show]
 
+    resources :parties, only: [:show, :index]
+
     resources :guests, only: [:index, :show] do
       resources :gifts, only: [:index]
     end
